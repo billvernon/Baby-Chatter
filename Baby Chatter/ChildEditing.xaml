@@ -1,0 +1,78 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Baby_Chatter.ChildEditing"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:app="clr-namespace:Baby_Chatter"
+
+	FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Picture Options -->
+        <Popup x:Name="PictureMenu" IsOpen="False" Margin="0,0,0,480" Grid.RowSpan="2">
+            <StackPanel x:Name="PicturePopupStackPanel" Background="Gray" Width="479">
+                <!-- Define buttons for the picture menu -->
+                <Button x:Name="PictureFromCameraButton" Click="TakePictureButton_Click">Choose or Take a Picture</Button>
+                <Button x:Name="RemovePictureButton" Click="RemovePictureButton_Click">Remove Current Picture</Button>
+                <Button x:Name="CancelPictureButton" Click="CancelPictureButton_Click">Cancel</Button>
+            </StackPanel>
+        </Popup>
+
+        <!--Background-->
+        <Grid Grid.RowSpan="2" Height="768" Width="480">
+            <Rectangle Fill="{StaticResource ApplicationBlue}" HorizontalAlignment="Left" Width="100" Margin="0,58,0,0"/>
+            <Rectangle Margin="100,47,0,0" Fill="{StaticResource ApplicationLightGray}"/>
+            <Rectangle Fill="{StaticResource ApplicationBlue}" Height="58" VerticalAlignment="Top" StrokeThickness="0"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="45" FontSize="32" RenderTransformOrigin="1.089,0.467">
+            	<Run Text="edit child"/>
+            	<LineBreak/>
+            	<Run/>
+            </TextBlock>
+        </Grid>
+
+        <!-- Content Controls -->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid.Resources>
+                <app:DateTimeOrStringToStringConverter x:Name="DateTimeOrStringToStringConverter"/>
+            </Grid.Resources>
+            <!-- Image -->
+            <Grid HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.47,0.84" Margin="0,77,0,0">
+                <Image x:Name="ChildImageControl" Width="130" Height="130" HorizontalAlignment="Center" VerticalAlignment="Center" Source="{Binding Picture}"/>
+                <Button x:Name="PictureButton" Background="White" Margin="-13,-11,-15,-17" Foreground="#FFAAAAAA" FontSize="25.333" Content=" add a&#xA;picture" FontFamily="Segoe WP" BorderBrush="#FFC1C1C1" BorderThickness="1" Tap="PictureButton_Tap">
+                </Button>
+            </Grid>
+
+            <!-- Name Field -->
+            <TextBox x:Name="NameField" IsHitTestVisible="False" Height="70" Text="{Binding ChildName}" Margin="154,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="279" Background="#BFFFFFFF" Foreground="#FFAAAAAA" BorderBrush="#FFAAAAAA" BorderThickness="1" HorizontalAlignment="Left"/>
+
+            <!-- Date Picker -->
+            <Grid HorizontalAlignment="Left" Height="43" VerticalAlignment="Top" Width="256" Margin="165,152,0,0">
+                <toolkit:DatePicker x:Name="DatePicker" Value="{Binding Birthdate}" IsHitTestVisible="True" BorderThickness="0" BorderBrush="White" FontSize="18.667" Foreground="Transparent" Background="Transparent" Opacity="0" ValueChanged="DatePicker_ValueChanged"/>
+                <TextBlock x:Name="DateField" IsHitTestVisible="False" Text="{Binding Birthdate, Converter={StaticResource DateTimeOrStringToStringConverter}}" TextWrapping="Wrap" Foreground="{StaticResource InputItemBorderColor}" FontSize="25.333" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                <Border IsHitTestVisible="False" BorderBrush="{StaticResource InputItemBorderColor}" BorderThickness="1"/>
+            </Grid>
+        </Grid>
+    </Grid>
+
+    <!-- Application Bar -->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar BackgroundColor="{StaticResource AppBarColor}">
+            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/save.png" Text="save" Click="SaveButton_Click"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+</phone:PhoneApplicationPage>

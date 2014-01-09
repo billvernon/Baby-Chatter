@@ -1,0 +1,20 @@
+C:\Users\William\Documents\Visual Studio 2012\Projects\Baby Chatter\Baby Chatter\Bin\Debug\Assets\ApplicationIcon.png
+C:\Users\William\Documents\Visual Studio 2012\Projects\Baby Chatter\Baby Chatter\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+C:\Users\William\Documents\Visual Studio 2012\Projects\Baby Chatter\Baby Chatter\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+C:\Users\William\Documents\Visual Studio 2012\Projects\Baby Chatter\Baby Chatter\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+C:\Users\William\Documents\Visual Studio 2012\Projects\Baby Chatter\Baby Chatter\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+C:\Users\William\Documents\Visual Studio 2012\Projects\Baby Chatter\Baby Chatter\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+C:\Users\William\Documents\Visual Studio 2012\Projects\Baby Chatter\Baby Chatter\Bin\Debug\Baby Chatter.dll
+C:\Users\William\Documents\Visual Studio 2012\Projects\Baby Chatter\Baby Chatter\Bin\Debug\Baby Chatter.pdb
+C:\Users\William\Documents\Visual Studio 2012\Projects\Baby Chatter\Baby Chatter\Bin\Debug\AppManifest.xaml
+C:\Users\William\Documents\Visual Studio 2012\Projects\Baby Chatter\Baby Chatter\Bin\Debug\Properties\WMAppManifest.xml
+C:\Users\William\Documents\Visual Studio 2012\Projects\Baby Chatter\Baby Chatter\Bin\Debug\Baby_Chatter_Debug_AnyCPU.xap
+C:\Users\William\Documents\Visual Studio 2012\Projects\Baby Chatter\Baby Chatter\obj\Debug\App.g.cs
+C:\Users\William\Documents\Visual Studio 2012\Projects\Baby Chatter\Baby Chatter\obj\Debug\DetailsPage.g.cs
+C:\Users\William\Documents\Visual Studio 2012\Projects\Baby Chatter\Baby Chatter\obj\Debug\MainPage.g.cs
+C:\Users\William\Documents\Visual Studio 2012\Projects\Baby Chatter\Baby Chatter\obj\Debug\Baby Chatter.g.resources
+C:\Users\William\Documents\Visual Studio 2012\Projects\Baby Chatter\Baby Chatter\obj\Debug\Baby_Chatter.Resources.AppResources.resources
+C:\Users\William\Documents\Visual Studio 2012\Projects\Baby Chatter\Baby Chatter\obj\Debug\Baby Chatter.csproj.GenerateResource.Cache
+C:\Users\William\Documents\Visual Studio 2012\Projects\Baby Chatter\Baby Chatter\obj\Debug\Baby Chatter.dll
+C:\Users\William\Documents\Visual Studio 2012\Projects\Baby Chatter\Baby Chatter\obj\Debug\Baby Chatter.pdb
+C:\Users\William\Documents\Visual Studio 2012\Projects\Baby Chatter\Baby Chatter\obj\Debug\XapCacheFile.xml
